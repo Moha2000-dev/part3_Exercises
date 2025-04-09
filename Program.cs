@@ -7,7 +7,28 @@
         {
             while (true)
             {
-                Console.WriteLine("please enter the number of the exercise you want to run (1-9) or 0 to exit:");
+                Console.Clear();
+                Console.WriteLine("\nChoose an Array Exercise:");
+                Console.WriteLine("1. Even or Odd");
+                Console.WriteLine("2. Largest Number");
+                Console.WriteLine("3. Celsius to Fahrenheit");
+                Console.WriteLine("4. Discount Calculator");
+                Console.WriteLine("5. Grading System");
+                Console.WriteLine("6. Swap Numbers");
+                Console.WriteLine("7. Days to Weeks Converter");
+                Console.WriteLine("8. Electricity Bill Calculator");
+                Console.WriteLine("9. Simple Calculator");
+                Console.WriteLine("10. Basic ATM System");
+                Console.WriteLine("11. Geometric Calculator");
+                Console.WriteLine("12. Factorial Calculator");
+                Console.WriteLine("13. Sum of Odd and Even Numbers");
+                Console.WriteLine("14. Scientific Calculator");
+                Console.WriteLine("15. Print Pattern");
+                Console.WriteLine("16. Print Pyramid Pattern");
+                Console.WriteLine("17. Print Diamond Pattern");
+                Console.WriteLine("18. Guessing Game");
+                Console.WriteLine("Enter 0 to exit.");
+
                 int exerciseNumber = int.Parse(Console.ReadLine());
                 if (exerciseNumber == 0)
                 {
@@ -64,6 +85,54 @@
                         int num2 = int.Parse(Console.ReadLine());
                         string operation = Console.ReadLine();
                         simpleCalculator(num1, num2, operation);
+                        break;
+                    case 10:
+                        Console.WriteLine("Enter your choice (1: Deposit, 2: Withdraw, 3: Transfer):");
+                        string choice = Console.ReadLine();
+                        ATM(choice);
+                        break;
+                    case 11:
+                        Console.WriteLine("Enter your choice (1: Circle, 2: Rectangle, 3: Triangle):");
+                        string geometricChoice = Console.ReadLine();
+                        geometricCalculator(geometricChoice);
+                        break;
+                    case 12:
+                        Console.WriteLine("Enter a number to calculate its factorial:");
+                        int factorialNumber = int.Parse(Console.ReadLine());
+                        factorial(factorialNumber);
+                        break;
+                    case 13:
+                        Console.WriteLine("Enter a number to calculate the sum of odd and even numbers:");
+                        int sumNumber = int.Parse(Console.ReadLine());
+                        sumOfOddAndEven(sumNumber);
+                        break;
+                    case 14:
+                        Console.WriteLine("Enter an operation (sin, cos, tan, log, exp):");
+                        string scOperation = Console.ReadLine();
+                        Console.WriteLine("Enter two numbers:");
+                        double scNum1 = double.Parse(Console.ReadLine());
+                        double scNum2 = double.Parse(Console.ReadLine());
+                        scCalculator(scOperation, scNum1, scNum2);
+                        break;
+                    case 15:
+                        Console.WriteLine("Enter a number to print a pattern:");
+                        int patternNumber = int.Parse(Console.ReadLine());
+                        printPattern(patternNumber);
+                        break;
+                    case 16:
+                        Console.WriteLine("Enter a number to print a pyramid pattern:");
+                        int pyramidNumber = int.Parse(Console.ReadLine());
+                        printPyramid(pyramidNumber);
+                        break;
+                    case 17:
+                        Console.WriteLine("Enter a number to print a diamond pattern:");
+                        int diamondNumber = int.Parse(Console.ReadLine());
+                        printDiamond(diamondNumber);
+                        break;
+                    case 18:
+                        Console.WriteLine("Enter a number to guess:");
+                        int numberToGuess = int.Parse(Console.ReadLine());
+                        guessingGame(numberToGuess);
                         break;
                     default:
                         Console.WriteLine("Invalid exercise number.");
