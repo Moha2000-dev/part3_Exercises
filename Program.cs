@@ -312,7 +312,134 @@
             printAnsers("the factorial of " + n + " is " + result);
         }
 
+        // sum of odd and even number 
+        public static void sumOfOddAndEven(int n)
+        {
+            int evenSum = 0;
+            int oddSum = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    evenSum += i;
+                }
+                else
+                {
+                    oddSum += i;
+                }
+            }
+            printAnsers("the sum of even numbers is " + evenSum);
+            printAnsers("the sum of odd numbers is " + oddSum);
+        }
+        //scientific calculator
+        public static void scCalculator(string operation, double a, double b)
+        {
+            double result = 0;
+            switch (operation)
+            {
+                case "sin":
+                    result = Math.Sin(a);
+                    break;
+                case "cos":
+                    result = Math.Cos(a);
+                    break;
+                case "tan":
+                    result = Math.Tan(a);
+                    break;
+                case "log":
+                    result = Math.Log(a);
+                    break;
+                case "exp":
+                    result = Math.Exp(a);
+                    break;
+                default:
+                    printAnsers("invalid operation");
+                    return;
+            }
+            printAnsers("the result is " + result);
+        }
+        // Print pattern (for loop)
+        public static void printPattern(int n)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }
+        // Print a Pyramid Pattern 
+        public static void printPyramid(int n)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = n; j > i; j--)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 1; k <= (2 * i - 1); k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }
+        // Print a Diamond Pattern
+        public static void printDiamond(int n)
+        {
+            // Print upper half
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = n; j > i; j--)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 1; k <= (2 * i - 1); k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            // Print lower half
+            for (int i = n - 1; i >= 1; i--)
+            {
+                for (int j = n; j > i; j--)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 1; k <= (2 * i - 1); k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        //gussing game with helper 
+        public static void guessingGame(int numberToGuess)
+        {
+            int guess;
+            int attempts = 0;
+            do
+            {
+                Console.WriteLine("Enter your guess:");
+                guess = int.Parse(Console.ReadLine());
+                attempts++;
+                if (guess < numberToGuess)
+                {
+                    printAnsers("too low");
+                }
+                else if (guess > numberToGuess)
+                {
+                    printAnsers("too high");
+                }
+            } while (guess != numberToGuess);
+            printAnsers("Congratulations! You guessed the number in " + attempts + " attempts.");
+        }
+
     }
 
-    
+
 }
