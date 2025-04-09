@@ -103,10 +103,66 @@
             printAnsers("weeks is " + weeks);
             printAnsers("remaining days is " + remainingDays);
         }
-        
+        // 8 elctricity bill calculator 100 give 0.5 $ 101-300 0.75 $ 301+1 1$
+        public static void electricityBillCalculator(int units)
+        {
+            double bill = 0;
+            if (units <= 100)
+            {
+                bill = units * 0.5;
+            }
+            else if (units <= 300)
+            {
+                bill = units * 0.75;
+            }
+            else
+            {
+                bill = units * 1;
+            }
+            printAnsers("the bill is " + bill);
+        }
+        // 9. simple calculator 
+        public static void simpleCalculator(int a, int b, string operation)
+        {
+            double result = 0;
+            switch (operation)
+            {
+                case "+":
+                    result = a + b;
+                    break;
+                case "-":
+                    result = a - b;
+                    break;
+                case "*":
+                    result = a * b;
+                    break;
+                case "/":
+                    if (b != 0)
+                    {
+                        result = (double)a / b;
+                    }
+                    else
+                    {
+                        printAnsers("cannot divide by zero");
+                        return;
+                    }
+                    break;
+                default:
+                    printAnsers("invalid operation");
+                    return;
+            }
+            printAnsers("the result is " + result);
+        }
         static void Main(string[] args)
         {
             
+
+
+
+
+
+
+
         }
     }
 }
