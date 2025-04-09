@@ -95,7 +95,15 @@
             printAnsers("a is " + a);
             printAnsers("b is " + b);
         }
-         
+        //7. dyaes to weeks conventer
+        public static void daysToWeeks(int days)
+        {
+            int weeks = days / 7;
+            int remainingDays = days % 7;
+            printAnsers("weeks is " + weeks);
+            printAnsers("remaining days is " + remainingDays);
+        }
+        
         static void Main(string[] args)
         {
             
