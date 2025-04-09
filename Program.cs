@@ -86,8 +86,16 @@
                 printAnsers("F");
             }
         }
-        
-
+        // 6. swap two numbers 
+        public static void swapNumbers(ref int a, ref int b)
+        {
+            int temp = a;
+            a = b;
+            b = temp;
+            printAnsers("a is " + a);
+            printAnsers("b is " + b);
+        }
+         
         static void Main(string[] args)
         {
             
