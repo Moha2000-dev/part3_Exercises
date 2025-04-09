@@ -2,6 +2,82 @@
 {
     internal class Program
     {
+
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                Console.WriteLine("please enter the number of the exercise you want to run (1-9) or 0 to exit:");
+                int exerciseNumber = int.Parse(Console.ReadLine());
+                if (exerciseNumber == 0)
+                {
+                    break;
+                }
+                switch (exerciseNumber)
+                {
+                    case 1:
+                        Console.WriteLine("Enter a number:");
+                        int number = int.Parse(Console.ReadLine());
+                        evenOdd(number);
+                        break;
+                    case 2:
+                        Console.WriteLine("Enter three numbers:");
+                        int a = int.Parse(Console.ReadLine());
+                        int b = int.Parse(Console.ReadLine());
+                        int c = int.Parse(Console.ReadLine());
+                        largestNumber(a, b, c);
+                        break;
+                    case 3:
+                        Console.WriteLine("Enter temperature in Celsius:");
+                        double celsius = double.Parse(Console.ReadLine());
+                        celciusToFarenheit(celsius);
+                        break;
+                    case 4:
+                        Console.WriteLine("Enter price:");
+                        double price = double.Parse(Console.ReadLine());
+                        discountCalculator(price);
+                        break;
+                    case 5:
+                        Console.WriteLine("Enter score:");
+                        int score = int.Parse(Console.ReadLine());
+                        gradingSystem(score);
+                        break;
+                    case 6:
+                        Console.WriteLine("Enter two numbers to swap:");
+                        int x = int.Parse(Console.ReadLine());
+                        int y = int.Parse(Console.ReadLine());
+                        swapNumbers(ref x, ref y);
+                        break;
+                    case 7:
+                        Console.WriteLine("Enter number of days:");
+                        int days = int.Parse(Console.ReadLine());
+                        daysToWeeks(days);
+                        break;
+                    case 8:
+                        Console.WriteLine("Enter electricity units consumed:");
+                        int units = int.Parse(Console.ReadLine());
+                        electricityBillCalculator(units);
+                        break;
+                    case 9:
+                        Console.WriteLine("Enter two numbers and an operation (+, -, *, /):");
+                        int num1 = int.Parse(Console.ReadLine());
+                        int num2 = int.Parse(Console.ReadLine());
+                        string operation = Console.ReadLine();
+                        simpleCalculator(num1, num2, operation);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid exercise number.");
+                        break;
+                }
+            }
+
+
+
+
+
+
+
+            }
         public static void printAnsers(string anser)
         {
             
@@ -9,6 +85,10 @@
            
         }
         public static void printAnsers(int anser)
+        {
+            Console.WriteLine("your anser  is " + anser);
+        }
+        public static void printAnsers(double anser)
         {
             Console.WriteLine("your anser  is " + anser);
         }
@@ -153,16 +233,6 @@
             }
             printAnsers("the result is " + result);
         }
-        static void Main(string[] args)
-        {
-            
-
-
-
-
-
-
-
-        }
+       
     }
 }
