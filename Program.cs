@@ -77,12 +77,12 @@
 
 
 
-            }
+        }
         public static void printAnsers(string anser)
         {
-            
-            Console.WriteLine("your anser  is " +anser);
-           
+
+            Console.WriteLine("your anser  is " + anser);
+
         }
         public static void printAnsers(int anser)
         {
@@ -233,6 +233,86 @@
             }
             printAnsers("the result is " + result);
         }
-       
+        //basice Atm System 
+        public static void ATM(string choice)
+        {
+            switch (choice) {
+
+                case "1":
+                    Console.WriteLine("Enter the amount to deposit:");
+                    double depositAmount = double.Parse(Console.ReadLine());
+                    printAnsers("You have deposited: " + depositAmount);
+                    break;
+                case "2":
+                    Console.WriteLine("Enter the amount to withdraw:");
+                    double withdrawAmount = double.Parse(Console.ReadLine());
+                    printAnsers("You have withdrawn: " + withdrawAmount);
+                    break;
+                case "3":
+                    Console.WriteLine("Enter the amount to transfer:");
+                    double transferAmount = double.Parse(Console.ReadLine());
+                    printAnsers("You have transferred: " + transferAmount);
+                    break;
+                default:
+                    printAnsers("exitng");
+                    break;
+
+
+            }
+        
+        
+        }
+        //geometric calculator 
+        public static void geometricCalculator(string input ) {
+            switch (input)
+            {
+                case "1":
+                    Console.WriteLine("Enter the radius of the circle:");
+                    double radius = double.Parse(Console.ReadLine());
+                    double area = Math.PI * Math.Pow(radius, 2);
+                    printAnsers("The area of the circle is: " + area);
+                    break;
+                case "2":
+                    Console.WriteLine("Enter the length and width of the rectangle:");
+                    double length = double.Parse(Console.ReadLine());
+                    double width = double.Parse(Console.ReadLine());
+                    double rectangleArea = length * width;
+                    printAnsers("The area of the rectangle is: " + rectangleArea);
+                    break;
+                case "3":
+                    Console.WriteLine("Enter the base and height of the triangle:");
+                    double baseLength = double.Parse(Console.ReadLine());
+                    double height = double.Parse(Console.ReadLine());
+                    double triangleArea = 0.5 * baseLength * height;
+                    printAnsers("The area of the triangle is: " + triangleArea);
+                    break;
+
+
+
+
+
+            }
+        
+        
+        
+        
+        }
+        public static void factorial(int n)
+        {
+            if (n < 0)
+            {
+                printAnsers("factorial is not defined for negative numbers");
+                return;
+            }
+            int result = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                result *= i;
+            }
+            printAnsers("the factorial of " + n + " is " + result);
+        }
+
     }
+
+    
 }
